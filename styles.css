@@ -60,3 +60,23 @@ body {
 input {
   display: none;
 }
+.numeros button {
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #5cc8ff;
+  background-color: #292f36;
+  border: 0;
+}
+.numeros button:hover {
+  color: #00a3f5;
+}
+.operadores button {
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #d63c6b;
+  background-color: #292f36;
+  border: 0;
+}
+.operadores button:hover {
+  color: #c41c4f;
+}
