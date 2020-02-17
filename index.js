@@ -26,3 +26,49 @@ button5.onclick = function() {
   console.log(Math.sqrt(input1.value));
   divResultado.textContent = Math.sqrt(input1.value);
 };
+const number1 = document.querySelector("#number1");
+const number2 = document.querySelector("#number2");
+const number3 = document.querySelector("#number3");
+const number4 = document.querySelector("#number4");
+const number5 = document.querySelector("#number5");
+const number6 = document.querySelector("#number6");
+const number7 = document.querySelector("#number7");
+const number8 = document.querySelector("#number8");
+const number9 = document.querySelector("#number9");
+const number0 = document.querySelector("#number0");
+number0.onclick = function() {
+  divResultado.textContent = removerZero(divResultado.textContent + "0");
+};
+number1.onclick = function() {
+  divResultado.textContent = removerZero(divResultado.textContent + "1");
+};
+number2.onclick = function() {
+  divResultado.textContent = removerZero(divResultado.textContent + "2");
+};
+number3.onclick = function() {
+  divResultado.textContent = removerZero(divResultado.textContent + "3");
+};
+number4.onclick = function() {
+  divResultado.textContent = removerZero(divResultado.textContent + "4");
+};
+number5.onclick = function() {
+  divResultado.textContent = removerZero(divResultado.textContent + "5");
+};
+number6.onclick = function() {
+  divResultado.textContent = removerZero(divResultado.textContent + "6");
+};
+number7.onclick = function() {
+  divResultado.textContent = removerZero(divResultado.textContent + "7");
+};
+number8.onclick = function() {
+  divResultado.textContent = removerZero(divResultado.textContent + "8");
+};
+number9.onclick = function() {
+  divResultado.textContent = removerZero(divResultado.textContent + "9");
+};
+function removerZero(text) {
+  if (text[0] === "0") {
+    return text.slice(1);
+  }
+  return text;
+}
