@@ -7,24 +7,29 @@ const button3 = document.querySelector("#button3");
 const button4 = document.querySelector("#button4");
 const button5 = document.querySelector("#button5");
 button1.onclick = function() {
-  console.log(+input1.value + +input2.value);
-  divResultado.textContent = +input1.value + +input2.value;
+  input1.value = divResultado.textContent;
+  input2.value = "+";
+  divResultado.textContent = "0";
 };
 button2.onclick = function() {
-  console.log(+input1.value - +input2.value);
-  divResultado.textContent = +input1.value - +input2.value;
+  input1.value = divResultado.textContent;
+  input2.value = "-";
+  divResultado.textContent = "0";
 };
 button3.onclick = function() {
-  console.log(+input1.value / +input2.value);
-  divResultado.textContent = +input1.value / +input2.value;
+  input1.value = divResultado.textContent;
+  input2.value = "/";
+  divResultado.textContent = "0";
 };
 button4.onclick = function() {
-  console.log(+input1.value * +input2.value);
-  divResultado.textContent = +input1.value * +input2.value;
+  input1.value = divResultado.textContent;
+  input2.value = "*";
+  divResultado.textContent = "0";
 };
 button5.onclick = function() {
-  console.log(Math.sqrt(input1.value));
-  divResultado.textContent = Math.sqrt(input1.value);
+  input1.value = divResultado.textContent;
+  input2.value = "sqrt";
+  divResultado.textContent = "0";
 };
 const number1 = document.querySelector("#number1");
 const number2 = document.querySelector("#number2");
@@ -73,4 +78,21 @@ function removerZero(text) {
   return text;
 }
 const buttonIgual = document.querySelector("#igual");
-buttonIgual.onclick = function() {};
+buttonIgual.onclick = function() {
+  switch (input2.value) {
+    case "+":
+      divResultado.textContent = +input1.value + +divResultado.textContent;
+      break;
+    case "-":
+      divResultado.textContent = +input1.value - +divResultado.textContent;
+      break;
+    case "/":
+      divResultado.textContent = +input1.value / +divResultado.textContent;
+      break;
+    case "*":
+      divResultado.textContent = +input1.value * +divResultado.textContent;
+      break;
+    default:
+      break;
+  }
+};

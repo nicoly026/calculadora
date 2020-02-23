@@ -80,3 +80,7 @@ input {
 .operadores button:hover {
   color: #c41c4f;
 }
+.outros {
+  display: flex;
+  flex-direction: column;
+}
